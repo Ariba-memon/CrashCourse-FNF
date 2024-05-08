@@ -16,7 +16,10 @@ module.exports = {
     // },
     extend: {
       fontFamily:{
-        'Merri':['Merri']
+        'Merri':['Merri'],
+        'Poppins':['Poppins'],
+        'Roboto':['Roboto'],
+        'Montserrat':['Montserrat']
       }
     },
   },
