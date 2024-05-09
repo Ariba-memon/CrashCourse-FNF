@@ -4,9 +4,10 @@ const AboutSection = () => {
   return (
     <div>
       <div >
+      <h1 className='m-32 font-bold text-3xl font-Roboto sm:text-sm md:text-lg lg:text-3xl text-[#212121]'>About Us</h1>
       <div>
   
-       <h1 className='m-10 font-bold text-3xl font-Roboto sm:text-sm md:text-lg lg:text-3xl text-[#212121]'>About Us</h1>
+     
       <p className='m-10 text-justify font-Poppins
 sm:text-sm md:text-lg lg:text-lg  sm:text-justify md:text-justify lg:text-justify bg-gradient-to-r from-gray-300 to-transparent'>At [Your Blog Name], we believe that every voice deserves a platform. Our journey began with a simple idea: to create a space where people from all walks of life can come together to share their thoughts, experiences, and passions. Whether you're an aspiring writer, a seasoned professional, or simply someone with a story to tell, you'll find a home here.
 
