@@ -1,107 +1,149 @@
-// import React from 'react'
-// import Logo from '../Assets/Logo.png'
-// import { Link } from "react-router-dom";
-// import HamburgerImage from '../Assets/hamburgericon.webp'
-// import CrossImage from '../Assets/cross.png'
-// const Navbar = () => {
-//   return (
-//     <>
-//     {/* {**************First Code of Navbar*************} */}
-//     {/* <div className='font-Merri bg-[#000000] text-[#EEF7FF] p-1 sm:text-sm md:text-base  text-center justify-center items-center flex'>
-//       <h2>Welcome To Our Blog Website 🧨
-// </h2>
-//  </div> */}
-//   {/* {**************Second Navbar Code*************} */}
-//     <nav className='w-full fixed  top-0 left-0 right-0 z-10 bg-[#212121] text-[#EEEEEE] p-2'>
-//        {/* {**************Logo Code*************} */} 
-// <div className='mx-auto flex justify-between px-4 lg:max-w-7xl md:items-center md:flex md:px-8 '>
-// <div className='flex items-center justify-between py-3 md:py-5 md:block '>
-//       <Link to='/'>
-//      <img src={Logo} width={48}  height={45} alt='logo'/>
-//      </Link>
-//  {/* {**************Mobile Responsive Code*************} */} 
-  
-
-//     </div>
-//      {/* {**************Nav Links Code*************} */} 
-//    <div>
-//    <ul className='flex space-x-10'>
-//     <li>
-//       <Link to='/'>
-//         <div>
-//         Home
-//         </div>
-//       </Link>
-//     </li>
-//     <li>
-//       <Link to='/About'>
-//         <div>
-//         About
-//         </div>
-//       </Link>
-//     </li>
-//     <li>
-//       <Link to='/Contact'>
-//         <div>
-//      Contact
-//         </div>
-//       </Link>
-//     </li>
-//     <li>
-//       <Link to='/Contact'>
-//         <div>
-//     PostYourBlogs
-//         </div>
-//       </Link>
-//     </li>
-//    </ul>
-
-//    </div>
-// </div>
-
-//     </nav>
-//     </>
-//   )
-// }
-
-// export default Navbar
-
-
-
-
-
-import React from 'react'
-import Logo from '../Assets/Logo.png'
-import {Link} from 'react-router-dom'
-import { BiAlignRight } from "react-icons/bi";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from '../Assets/Logo.png'
+import Pdf from '../Assets/Book.pdf'
 const Navbar = () => {
-  return (
-    <div className='flex justify-between items-center bg-[#212121] text-[#EEEEEE] md:px-[20px] px-[20px] py-2 w-full absolute'>
-      <div>
-      {/* <img src={Logo} width={20}  height={20} alt='logo'/> */}
-      </div>
-      <div>
-        <ul className='hidden md:flex space-x-[60px] text-lg font-semibold'>
-          <li className='hover:text-blue-500 pt-[80px]'>
-            <Link to='/'>Home</Link>
-          </li>
-          <li className='hover:text-blue-500 pt-[80px]'>
-            <Link to='/about'>About</Link>
-          </li>
-          <li className='hover:text-blue-500 pt-[80px]'>
-            <Link to='/contact'>Contact</Link>
-          </li>
-          <li className='hover:text-blue-500 pt-[80px]'>
-            <Link to='/postblogs'>PostYourBlog</Link>
-          </li>
-          <div>
-            <button className='m-16 bg-blue-600 px-6 py-2 text-white rounded-xl text-xl font-semibold hover:bg-blue-900 hover:animate-bounce'>SignIn</button>
-          </div>
-          </ul>
-      </div>
-      <div className='static md:hidden text-3xl lg:hidden'><BiAlignRight /></div>
-    </div>
-  )
-}
+  const [isOpen, setIsOpen] = useState(false);
 
-export default Navbar
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <>
+      <div className="bg-gray-700 text-white p-1 md:text-base text-sm flex justify-center items-center  text-center font-sans">
+        Unleash the Power of Integration: Discover Our API Today! 🚀
+      </div>
+
+      <nav className="bg-black p-4  ">
+        <div className="max-w-7xl mx-auto flex justify-between items-center xl:pl-32 lg:pl-24  xl:pr-52 lg:pr-24 md:px-8 sm:4 px-3">
+          <div>
+            <Link to="/">
+              <img src={logo} alt="Logo" width={60} height={50}/>
+            </Link>
+          </div>
+          <div className="hidden md:block">
+            <ul className="flex space-x-8 ">
+              <li>
+                <Link to="/">
+                  <div className="text-white hover:text-gray-300 py-2 font-semibold font-sans">
+                    Home
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about">
+                  <div className="text-white hover:text-gray-300 py-2 font-semibold font-sans">
+                    About Us
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact">
+                  <div className="text-white hover:text-gray-300 py-2 font-semibold  font-sans">
+                    Contact
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/postblogs">
+                  <div className="text-white hover:text-gray-300 py-2 font-semibold font-sans">
+                  PostBlogs
+                  </div>
+                </Link>
+              </li>
+              {/* <li>
+                <Link to="/blog">
+                  <div className="text-white hover:text-gray-300 py-2 font-semibold font-sans">
+                    Blog
+                  </div>
+                </Link>
+              </li> */}
+              <div>
+                <Link to={Pdf} target="blank">
+                <button className="py-2 px-10 bg-gray-700  rounded-lg md:ml-12  font-semibold text-[#FFFFFF] font-sans">
+                  DownloadPdf
+                </button>
+                </Link>
+              </div>
+            </ul>
+          </div>
+
+          {/* menu button  */}
+          <div className="md:hidden ">
+            <button
+              className="text-white focus:outline-none "
+              onClick={toggleMenu}
+            >
+              <svg
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+        {isOpen && (
+          <div className="md:hidden my-3">
+            <ul className="flex flex-col space-y-4 bg-[#FFE4D9] py-12 px-8">
+              <li>
+                <Link to="/">
+                  <div className="text-white hover:text-gray-300 font-sans">
+                    Home
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about">
+                  <div className="text-white hover:text-gray-300 font-sans">
+                    About Us
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact">
+                  <div className="text-white hover:text-gray-300 font-sans">
+                   Contact
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact-us">
+                  <div className="text-white hover:text-gray-300 font-sans">
+                    Contact
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/postblog">
+                  <div className="text-white hover:text-gray-300 font-sans">
+                   PostBlog
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
+      </nav>
+    </>
+  );
+};
+
+export default Navbar;

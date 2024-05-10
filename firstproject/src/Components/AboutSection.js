@@ -4,7 +4,7 @@ const AboutSection = () => {
   return (
     <div>
       <div >
-      <h1 className='m-32 font-bold text-3xl font-Roboto sm:text-sm md:text-lg lg:text-3xl text-[#212121]'>About Us</h1>
+      <h1 className='m-20 font-bold text-3xl font-Roboto sm:text-sm md:text-lg lg:text-3xl text-[#212121] text-center'>About Us</h1>
       <div>
   
      
