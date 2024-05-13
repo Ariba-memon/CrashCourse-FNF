@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-gray-700 text-white p-1 md:text-base text-sm flex justify-center items-center  text-center font-sans">
-        Unleash the Power of Integration: Discover Our API Today! 🚀
+      Where words weave worlds, and thoughts find their digital sanctuary! 🚀
       </div>
 
       <nav className="bg-black p-4  ">
@@ -46,12 +46,19 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/articles">
+                  <div className="text-white hover:text-gray-300 py-2 font-semibold font-sans">
+                 Blogs
+                  </div>
+                </Link>
+              </li>
+              {/* <li>
                 <Link to="/postblogs">
                   <div className="text-white hover:text-gray-300 py-2 font-semibold font-sans">
                   PostBlogs
                   </div>
                 </Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link to="/blog">
                   <div className="text-white hover:text-gray-300 py-2 font-semibold font-sans">
