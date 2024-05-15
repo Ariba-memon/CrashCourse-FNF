@@ -1,6 +1,6 @@
 const articles = [
     {
-        name: 'Dynamic-Routing-in-React.js',
+        name: 'Dynamic-Routing',
         title: 'Dynamic Routes in Action',
         content: [
             `To illustrate dynamic routing, let's consider an e-commerce app. 
@@ -17,7 +17,7 @@ const articles = [
             `,
         ]
     },    {
-        name: 'Whats-new-in-React19',
+        name: 'learn-React',
         title: 'React 19 Beta is now available on npm!',
         content: [
             `React DOM: <form> Actions 

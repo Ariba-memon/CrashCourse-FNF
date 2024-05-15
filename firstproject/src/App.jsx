@@ -10,6 +10,7 @@ import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 import ArticlePage from './pages/ArticlePage';
 import ArticlesListPage from './pages/ArticlesListPage'
+import  NotFoundPage from './pages/NotFoundPage'
 function App() {
   return (
  <>
@@ -24,6 +25,7 @@ function App() {
     {/* <Route path='/postblogs' element={<PostBlog />} /> */}
     <Route path="/articles" element={<ArticlesListPage />} />
  <Route path="/articles/:articleId" element={<ArticlePage />} />
+ <Route path="*" element={<NotFoundPage />} />
   </Routes>
   <Footer />
   </BrowserRouter></>
@@ -31,3 +33,6 @@ function App() {
 }
 
 export default App;
+
+// axios.get('http://localhost:8000/api/articles/learn-react')
+// const data = response.data
